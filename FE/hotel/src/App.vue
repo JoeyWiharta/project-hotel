@@ -10,7 +10,7 @@ const isnotlogin = computed(() => {
 
 <template>
     <div class="container">
-        <div class="row" style="margin-top: 65px;">
+        <div class="">
             <router-view></router-view>
         </div>
     </div>
