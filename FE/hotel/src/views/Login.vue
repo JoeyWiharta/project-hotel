@@ -88,7 +88,7 @@ const bodyParameters = computed(() => {
 
 function login() {
   axios({
-    url: 'http://127.0.0.1:8000/api/login', // Sesuaikan URL dengan server Laravel Anda
+    url: 'http://localhost:8000/api/login', // Sesuaikan URL dengan server Laravel Anda
     method: 'post',
     data: bodyParameters.value,
     headers: customConfig
