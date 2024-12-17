@@ -31,9 +31,9 @@
 
                 <!-- header -->
                 <div class="flex flex-col justify-center items-center ">   
-                    <img src="/images/iconHotel.png" alt="" class="max-w-[20px] md:max-w-[3rem] md:mb-6 md:mt-4">
-                    <h1 class="text-xs md:text-4xl font-semibold">Welcome To Alica Hotel</h1>
-                    <p class="text-[10px] md:text-base text-slate-700 md:mt-2">Please Enter You Details</p>
+                    <img src="/images/iconHotel.png" alt="" class="max-w-[20px] lg:max-w-[3rem] md:mb-6 md:mt-4">
+                    <h1 class="text-xs md:text-2xl lg:text-4xl font-semibold">Welcome To Alica Hotel</h1>
+                    <p class="text-[10px] lg:text-base text-slate-700 md:mt-2">Please Enter You Details</p>
                 </div>
 
                 <!-- form Register -->
@@ -41,7 +41,7 @@
 
                      <!-- Name  -->
                      <div class="flex flex-col w-40 md:w-80 mt-2 md:mt-4">
-                        <label for="username" class="mb-2 font-semibold text-xs md:text-lg hidden md:block">Full Name</label>
+                        <label for="username" class="mb-2 font-semibold text-xs md:text-lg hidden lg:block">Full Name</label>
                         <input 
                         type="text" 
                         name="username"
@@ -52,7 +52,7 @@
 
                     <!-- email -->
                     <div class="flex flex-col md:w-80 w-40 mt-2">
-                        <label for="email" class="mb-2 font-semibold text-xs md:text-lg hidden md:block">Email</label>
+                        <label for="email" class="mb-2 font-semibold text-xs md:text-lg hidden lg:block">Email</label>
                         <input 
                         name="email"
                         type="email" 
@@ -64,7 +64,7 @@
 
                     <!-- password -->
                     <div class="flex flex-col w-40 md:w-80 mt-2 md:mt-4">
-                        <label for="password" class="mb-2 font-semibold text-xs md:text-lg hidden md:block">Password</label>
+                        <label for="password" class="mb-2 font-semibold text-xs md:text-lg hidden lg:block">Password</label>
                         <input 
                         type="password" 
                         name="password"
@@ -76,7 +76,7 @@
 
                     <!-- Register button -->
                     <button class="border p-2 md:p-3 mt-4 md:mt-8 text-xs md:text-xl border-slate-700 rounded-lg bg-gray-800 text-white">
-                        Log In
+                        Register
                     </button>
                 </form>
 

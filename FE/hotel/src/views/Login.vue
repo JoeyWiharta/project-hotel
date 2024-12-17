@@ -12,16 +12,16 @@
 
                 <!-- header -->
                 <div class="flex flex-col justify-center items-center">   
-                    <img src="/images/iconHotel.png" alt="" class="max-w-[20px] md:max-w-[3rem] md:mb-6 md:mt-4">
-                    <h1 class="text-sm md:text-4xl font-semibold">Welcome Back!</h1>
-                    <p class="text-[10px] md:text-base text-slate-700 md:mt-2">Please Enter You Details</p>
+                    <img src="/images/iconHotel.png" alt="" class="max-w-[20px] lg:max-w-[3rem] md:mb-6 md:mt-4">
+                    <h1 class="text-sm md:text-2xl lg:text-4xl font-semibold">Welcome Back!</h1>
+                    <p class="text-[10px] lg:text-base text-slate-700 md:mt-2">Please Enter You Details</p>
                 </div>
 
                 <!-- form login -->
                 <form action="" class="flex flex-col justify-center items-center md:mt-16 mt-4" @submit.prevent="login">
                     <!-- email -->
                     <div class="flex flex-col md:w-80 w-40">
-                        <label for="email" class="mb-2 font-semibold text-xs md:text-lg hidden md:block">Email</label>
+                        <label for="email" class="mb-2 font-semibold text-xs md:text-lg hidden lg:block">Email</label>
                         <input 
                         name="email"
                         type="email" 
@@ -32,7 +32,7 @@
                     </div> 
                     <!-- password -->
                     <div class="flex flex-col w-40 md:w-80 mt-2 md:mt-5">
-                        <label for="password" class="mb-2 font-semibold text-xs md:text-lg hidden md:block">Password</label>
+                        <label for="password" class="mb-2 font-semibold text-xs md:text-lg hidden lg:block">Password</label>
                         <input 
                         type="password" 
                         name="password"

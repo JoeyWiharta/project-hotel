@@ -80,10 +80,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <h2>{{ route.params.roomnumber !== undefined ? 'Edit' : 'Add' }} Room</h2>
+  <div class="w-4/6 absolute right-0 flex justify-center items-center mr-32 mt-20 bg-[#F4F6FF] border-2 shadow-lg p-10 rounded-xl">
+    <div class="w-full">
+      <h2 class="font-poppins">{{ route.params.roomnumber !== undefined ? 'Edit' : 'Add' }} Room</h2>
     <form @submit.prevent="save">
-      <div class="form-group">
+      <div class="form-group mt-4">
         <label for="roomnumber">Room Number:</label>
         <input type="text" class="form-control" id="roomnumber" v-model="roomnumber" :readonly="roomnumber_readonly" required>
       </div>
@@ -116,6 +117,7 @@ onMounted(() => {
         <button type="button" class="btn btn-danger mt-3 ms-2 btn-lg" @click="cancel">Cancel</button>
       </div>
     </form>
+    </div>
   </div>
 </template>
 

@@ -49,23 +49,34 @@ function groupRoomsByType() {
     return groups
   }, {})
 }
+
+function formatPrice(price) {
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 2, // Menampilkan dua digit desimal
+    maximumFractionDigits: 2
+  }).format(price);
+}
+
 </script>
 
 <template>
-  <div class="rounded-3" style="width: 100%; height: 100%; padding-top: 70px;">
+  <div class="absolute right-0 w-5/6">
+    <div class="rounded-3" style="width: 100%; height: 100%;">
     <div class="container-fluid">
-      <h1 class="pt-4" style="color: #66A5AD;">VIEW ROOMS</h1>
+      <h1 class="pt-4" style="color: #1366D9;">VIEW ROOMS</h1>
       <div v-for="(group, type) in groupRoomsByType()" :key="type" class="mb-5">
         <h3>{{ type }}</h3>
         <div class="row">
-          <div v-for="room in group" :key="room.roomnumber" class="col-md-4 mb-4">
-            <div class="card">
-              <div class="card-body">
+          <div v-for="room in group" :key="room.roomnumber" class="col-md-4 mb-4 ">
+            <div class="card ">
+              <div class="card-body rounded-lg font-poppins">
                 <h5 class="card-title">{{ room.roomnumber }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{ room.type }}</h6>
-                <p class="card-text">Price per Night: Rp{{ room.price_per_night }}</p>
+                <h6 class="card-subtitle mb-2">{{ room.type }}</h6>
+                <p class="card-text ">Price per Night: <br><span class="text-[#1366D9] text-xl font-semibolf">{{ formatPrice(room.price_per_night) }}</span>/Night</p>
                 <p class="card-text">Description: {{ room.description }}</p>
-                <p class="card-text">Status: {{ room.status }}</p>
+                <p class="card-text">Status: <span :class="{'text-red-500': room.status === 'Unavailable', 'text-green-500': room.status === 'Available'}">{{ room.status }}</span></p>
               </div>
             </div>
           </div>
@@ -73,6 +84,8 @@ function groupRoomsByType() {
       </div>
     </div>
   </div>
+  </div>
+  
 </template>
 
 <style scoped>
